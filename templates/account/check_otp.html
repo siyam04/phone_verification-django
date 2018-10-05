@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Activate your account</h1>
+    <p>আপনার মোবাইলে পাঠানো কোডটি প্রবেশ করান</p>
+    <form class="" action="{% url 'check-otp' %}" method="POST">
+      {% csrf_token %}
+      {{forms.as_p}}
+      <button type="submit" name="">ঠিক আছ</button>
+       <p>For testing OTP code : <b>{{ otp_code }}</b></p>
+      {% if errMsg %}
+        {{errMsg}}
+      {% endif %}
+    </form>
+  </body>
+</html>

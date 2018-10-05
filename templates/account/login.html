@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="" method="POST">
+      {% csrf_token %}
+      {{forms.as_p}}
+      <button type="submit" name="">Submit</button>
+      {% if errMsg %}
+        {{errMsg}}
+      {% endif %}
+    </form>
+  </body>
+</html>
